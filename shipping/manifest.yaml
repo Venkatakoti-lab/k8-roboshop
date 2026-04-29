@@ -23,7 +23,7 @@ spec:
         image: koti0120/shipping:v1
         envFrom:
           - configMapRef:
-              - name: shipping-config
+              name: shipping-config
 ---
 apiVersion: v1
 kind: Service
