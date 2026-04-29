@@ -46,7 +46,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: payment-config
-  namepspace: roboshop
+  namespace: roboshop
   labels:
     project: roboshop
     component: payment
