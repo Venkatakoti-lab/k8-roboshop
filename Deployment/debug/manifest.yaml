@@ -6,4 +6,4 @@ metadata:
 spec:
   containers:
   - name: debug
-    image: debug:v1
+    image: koti0120/debug:v1
