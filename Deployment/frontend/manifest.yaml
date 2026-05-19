@@ -7,7 +7,6 @@ metadata:
     project: roboshop
     component: frontend
     tier: web
-type: Opaque
 data:
   nginx.conf: |
     user nginx;
