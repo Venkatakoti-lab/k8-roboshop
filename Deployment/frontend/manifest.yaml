@@ -91,6 +91,13 @@ spec:
         component: frontend
         tier: web
     spec:
+      volumes:
+      - name: nginx-conf
+        configMap:
+          name: nginx-conf
+          items:
+            - key: nginx.conf
+              path: nginx.conf
       containers:
       - name: frontend
         image: koti0120/web:v1
@@ -99,16 +106,10 @@ spec:
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
               readOnly: true
-        envFrom:
-          - configMapRef:
-              name: frontend
-      volumes:
-      - name: nginx-conf
-        configMap:
-          name: nginx-conf
-          items:
-            - key: nginx.conf
-              path: nginx.conf
+        # envFrom:
+        #   - configMapRef:
+        #       name: frontend
+      
 ---
 apiVersion: v1 
 kind: Service
