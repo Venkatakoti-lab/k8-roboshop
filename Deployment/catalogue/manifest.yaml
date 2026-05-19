@@ -8,7 +8,7 @@ metadata:
     component: catalogue
     tier: app
 data:
-  MONGO: true
+  MONGO: "true"
   MONGO_URL: "mongodb://mongodb:27017/catalogue"
 ---
 apiVersion: apps/v1
